@@ -8,3 +8,4 @@ scikit-learn
 matplotlib
 protobuf==4.25.3
 streamlit-webrtc==0.47.7
+av==11.0.0
