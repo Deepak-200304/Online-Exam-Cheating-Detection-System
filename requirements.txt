@@ -4,3 +4,4 @@ mediapipe==0.10.14
 mysql-connector-python==8.3.0
 pandas==2.2.2
 numpy==1.26.4
+protobuf==4.25.9
