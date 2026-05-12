@@ -1,8 +1,0 @@
-streamlit
-opencv-python-headless
-mediapipe
-mysql-connector-python
-pandas
-numpy
-scikit-learn
-matplotlib
