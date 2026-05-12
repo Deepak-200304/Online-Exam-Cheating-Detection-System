@@ -1,8 +1,7 @@
 streamlit
 opencv-python-headless
 numpy
-mediapipe
-mysql-connector-python
 pandas
 scikit-learn
-matplotlib
+matplotli
+mediapipe
