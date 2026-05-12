@@ -44,7 +44,7 @@ conn = mysql.connector.connect(
     host="mysql-opqo.railway.internal",
     user="root",
     password="MYOXSfLbCxPZfbfwENfJVxrsLzSiXDIE",
-    database="railway"
+    database="railway",
     port= 3306
 )
 
