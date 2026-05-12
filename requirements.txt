@@ -7,3 +7,4 @@ numpy==1.26.4
 scikit-learn
 matplotlib
 protobuf==4.25.3
+streamlit-webrtc==0.47.7
