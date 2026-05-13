@@ -1,9 +1,9 @@
-streamlit
-opencv-python-headless
-mediapipe
-mysql-connector-python
-pandas
+streamlit==1.32.0
+opencv-python-headless==4.9.0.80
+mediapipe==0.10.9
+mysql-connector-python==8.3.0
+pandas==2.2.1
 streamlit-webrtc==0.47.6
-av==10.0.0
-numpy
+av==11.0.0
+numpy==1.26.4
 tornado==6.2
