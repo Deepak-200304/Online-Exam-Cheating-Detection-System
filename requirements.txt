@@ -1,0 +1,11 @@
+streamlit
+opencv-python-headless
+mediapipe
+mysql-connector-python
+pandas
+streamlit-webrtc
+av
+numpy
+psycopg2-binary
+bcrypt
+streamlit-webrtc
