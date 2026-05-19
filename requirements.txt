@@ -1,10 +1,7 @@
 streamlit==1.35.0
 streamlit-webrtc==0.47.7
 opencv-python-headless==4.9.0.80
-mediapipe==0.10.14
 mysql-connector-python==8.4.0
-pandas
-numpy
-scikit-learn
-matplotlib
+pandas==2.2.2
+numpy==1.26.4
 av==11.0.0
