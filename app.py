@@ -1,7 +1,3 @@
-# Deployment-ready Online Exam Cheating Detection System
-# Updated for online deployment, login/signup, alerts, screenshots,
-# improved eye detection and tab switch detection.
-
 import streamlit as st
 import cv2
 import mediapipe as mp
@@ -11,6 +7,7 @@ import time
 import os
 import datetime
 from streamlit.components.v1 import html
+from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 
 st.set_page_config(page_title="Online Exam Cheating Detection", layout="wide")
 
@@ -56,6 +53,10 @@ conn = mysql.connector.connect(
 
 cursor = conn.cursor()
 
+class CheatingDetector(VideoTransformerBase):
+    def transform(self, frame):
+        # Convert the incoming browser frame to an OpenCV image
+        img = frame.to_ndarray(format="bgr24")
 # LOGIN / SIGNUP
 if not st.session_state.logged_in:
 
@@ -142,7 +143,7 @@ frame_window = st.image([])
 # START CAMERA
 if start:
 
-    cap = cv2.VideoCapture(0)
+    webrtc_streamer(key="exam-monitoring", video_transformer_factory=CheatingDetector)
 
     if not os.path.exists("screenshots"):
         os.makedirs("screenshots")
@@ -283,6 +284,11 @@ if start:
         time.sleep(0.5)
 
     cap.release()
+    # Draw your bounding boxes or alerts onto the 'img'
+        cv2.putText(img, "Monitoring Active", (10, 30), 
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+        
+return img
 
 # CLEAN LOGS
 st.subheader("Logs Data")
